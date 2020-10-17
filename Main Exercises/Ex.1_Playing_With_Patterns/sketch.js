@@ -8,16 +8,20 @@ function setup() {
 }
 
 function draw() {
-    background(0 ,0, 0);
+    background(0 ,0, 0, 0.15);
     stroke(0, 0, 100);
     // strokeWeight(1);
     
     // Mapped Variables:
-    let dynamicSegments = map(mouseX, 0, width, 6, 12);
+    let dynamicSegments = map(mouseX, -width, width, 6, 20);
     let segmentLength = abs(map(mouseX, 0, width, -100, 100));
     let segmentWeight = map(mouseY, height, 0, 1, 10);
 
     let stepAngle = TWO_PI / dynamicSegments; // Equally divide the spacing between segments within the circumference.
+
+    // Setting colours for interpolation:
+    let fromColour = color(179, 100, 75); // Start of range
+    let toColour = color(299, 100, 90); // End of range
 
     /**
      * DRAW OBJECTS:
@@ -27,6 +31,7 @@ function draw() {
             translate(width / 2, height / 2);
             rotate(i);
 
+            stroke(lerpColor(fromColour, toColour, i / dynamicSegments)); 
             strokeWeight(segmentWeight);
             line(0, 0, segmentLength, segmentLength);
         pop();
