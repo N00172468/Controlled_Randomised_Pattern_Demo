@@ -8,6 +8,7 @@
 
 ### Ex. 1 - Playing with Shapes and Patterns
 - A pattern of lines isolated within a circular perimeter.
+- Practicing the use of `TWO_PI` - based on P5.js docs.
 
 
 ---
