@@ -6,7 +6,7 @@
 
 ---
 
-### Ex. 1 - Playing with  and Patterns
+### Ex. 1 - Playing with Shapes and Patterns
 - A pattern of lines isolated within a circular perimeter.
 
 
