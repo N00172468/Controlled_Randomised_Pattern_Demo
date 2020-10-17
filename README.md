@@ -1,4 +1,17 @@
-### Creative Coding Libraries
+## John Carlo M. Ramos 
+- N00172468
+- DL836
+- Year 4
+- Creative Coding Module
+
+---
+
+### Ex. 1 - Playing with  and Patterns
+- A pattern of lines isolated within a circular perimeter.
+
+
+---
+### Message from Lecturer:
 ---
 Hi Class,
 
