@@ -10,6 +10,10 @@
 - A pattern of lines isolated within a circular perimeter.
 - Practicing the use of `TWO_PI` - based on P5.js docs.
 
+### Ex. 2 - Trigonometry
+- Practicing the use of Inverse Tan (i.e. Tan-^1)
+- P5.js version = atan()
+
 
 ---
 ### Message from Lecturer:
