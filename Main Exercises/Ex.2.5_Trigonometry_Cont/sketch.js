@@ -17,10 +17,13 @@ function draw() {
     // Trig. Variables:
     let transValX = width/2;
     let transValY = height/2;
+    let rotateVal = atan2(mouseY - transValY, mouseX - transValX);
     
     // Loop Variables:
-    let col = 7;
-    let row = 7;
+    numOfSquares = 7; 
+    squareSize = 100;
+    let col = 8;
+    let row = 8;
     let spaceWidth, spaceHeight;
     spaceWidth = width/col;
     spaceHeight = height/row;
@@ -32,17 +35,17 @@ function draw() {
      *      - Interpolation
      *      - Inverse Tan function for rotation
      */
-    for (let y = 0; y < row; y++) {
-        for (let x = 0; x < col; x++) {
+    for (let j = 0; j < numOfSquares; j++) {
+        for (let i = 0; i < numOfSquares; i++) {
             push();
-                translate(x * spaceWidth + spaceWidth/2, y * spaceHeight + spaceHeight/2);
-                let rotateVal = atan2(mouseY - transValY, mouseX - transValX);
+                translate(i * squareSize + squareSize/2, j * squareSize + squareSize/2);
+                let rotateVal = atan2(mouseY - j * squareSize, mouseX - i * squareSize);
+                // let rotateVal = atan2(mouseX - i, mouseY - j);
                 rotate(rotateVal);
 
-                stroke(lerpColor(fromColour, toColour, x * y / 32));
+                stroke(lerpColor(fromColour, toColour, i * j / 32));
                 strokeWeight(5);
-                strokeCap(ROUND);
-                fill(lerpColor(fromColour, toColour, x * y / 32));
+                fill(lerpColor(fromColour, toColour, i * j / 32));
                 rect(0, 0, 100, 100);
             pop();
         }
