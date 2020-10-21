@@ -22,11 +22,6 @@ function draw() {
     // Loop Variables:
     numOfSquares = 7; 
     squareSize = 100;
-    let col = 8;
-    let row = 8;
-    let spaceWidth, spaceHeight;
-    spaceWidth = width/col;
-    spaceHeight = height/row;
 
     /**
      * LOOPED SQUARES:
@@ -40,10 +35,10 @@ function draw() {
             push();
                 translate(i * squareSize + squareSize/2, j * squareSize + squareSize/2);
                 let rotateVal = atan2(mouseY - j * squareSize, mouseX - i * squareSize);
-                // let rotateVal = atan2(mouseX - i, mouseY - j);
                 rotate(rotateVal);
 
-                stroke(lerpColor(fromColour, toColour, i * j / 32));
+                // stroke(lerpColor(fromColour, toColour, i * j / 32));
+                stroke(0, 0, 0);
                 strokeWeight(5);
                 fill(lerpColor(fromColour, toColour, i * j / 32));
                 rect(0, 0, 100, 100);
