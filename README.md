@@ -15,10 +15,14 @@
 - P5.js version = atan()
 
 ### Ex. 2.5 - Trigonometry Continued
+- Continuing on from Ex. 2, but instead of all squares rotating in the same direction, each squares rotates individually depending on where the mouse cursor is. 
 
 ### Ex. 2.75 - Trigonometry Advanced
+- Using Ex. 2.5, each circles has smaller circles in them to display the `atan2()` function.
+- Calculating the scale value is also demonstrated within this exercise. 
 
 ### Ex. 3 - Controlled-Randomised Pattern
+- A pattern of controlled-randomised objects demonstrating ordered-random.
 
 ---
 ### Message from Lecturer:

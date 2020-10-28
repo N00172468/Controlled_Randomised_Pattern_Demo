@@ -32,7 +32,7 @@ function draw() {
                 rotate(rotateVal);
 
                 // noStroke();
-                fill(i, 0, numOfSquares - j);
+                fill(j, i, numOfSquares - j);
                 ellipse(0, 0, scaleVal, scaleVal);
                 // noStroke();
                 stroke(180);
