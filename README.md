@@ -14,6 +14,11 @@
 - Practicing the use of Inverse Tan (i.e. Tan-^1)
 - P5.js version = atan()
 
+### Ex. 2.5 - Trigonometry Continued
+
+### Ex. 2.75 - Trigonometry Advanced
+
+### Ex. 3 - Controlled-Randomised Pattern
 
 ---
 ### Message from Lecturer:
