@@ -7,7 +7,8 @@ let t = 0;
 let reverse = false;
 
 function setup() {
-    createCanvas(cWidth, cWidth);
+    // createCanvas(cWidth, cWidth);
+    createCanvas(windowWidth, windowHeight);
 
     colorMode(RGB, numOfSquares, numOfSquares, numOfSquares);
     smooth(); // Anti-aliasing
@@ -15,10 +16,19 @@ function setup() {
 }
 
 function draw() {
-    // background(0);
-    background(0, 20);
+    background(0);
     randomSeed(99); // Setting the seed value to return the same pseudo-random numbers every time.
-    // translate(-20, -20); // Fine-tuning to keep objects as centred as possible.
+    
+    /**  
+     * USED ONLY FOR FULL-WINDOWED CANVAS. 
+     * MUST COMMENT OUT translate() IF USING cWidth CANVAS!
+     * 
+     * - Fine-tuning to keep objects as centred as possible.
+    */
+    // translate(-20, -20); // For cWidth Canvas along with Interactive feature. 
+    // translate(width / 3.5, 0); // For Common Laptop Resolutions.
+    translate(width / 3.5, 80); // For Common Desktop Resolutions.
+
     /**
      * LOOPED OBJECTS:
      */
@@ -28,7 +38,6 @@ function draw() {
             let transY = j * squareSize + squareSize / 2;
             
             let distance = dist(transX, transY, mouseX, mouseY);
-            // let scaleVal = map(distance, 0, cWidth, 15, squareSize * 2);
             let scaleVal = map(distance, 0, cWidth, squareSize, 15);
             
             push();
@@ -36,20 +45,20 @@ function draw() {
                 
                 translate(transX, transY);
                 
-                noFill();
-                stroke(random(j) * random(t, - 0.09), random(i) * random(t, -0.09), numOfSquares - j);
-                
                 // Checking how long it would take for the animated color to reach the edge/corner of canvas:
                 // console.log('stroke!', t) 
 
                 if (randomNum == 0) {
                     stroke(0);
                     fill(random(j) * random(t, - 0.09), random(i) * random(t, -0.09), numOfSquares - j);
-                    rect(0, 0, squareSize, squareSize);
+                    rect(scaleVal, scaleVal, squareSize, squareSize);
                 } else {
-                    ellipse(0, 0, squareSize, squareSize);
+                    noFill();
+                    stroke(random(j) * random(t, - 0.09), random(i) * random(t, -0.09), numOfSquares - j);
+                    ellipse(scaleVal, scaleVal, squareSize, squareSize);
+                    
                     strokeWeight(t);
-                    ellipse(0, 0,squareSize / 2,squareSize / 2);
+                    ellipse(scaleVal, scaleVal,squareSize / 2,squareSize / 2);
                 }
             pop();
 
@@ -66,10 +75,10 @@ function draw() {
      */
 
     // If reversing, set speed to -0.5 milliseconds. Else, set speed to 0.1 milliseconds.
-    t = t + ( reverse ? -0.5 : 0.1); // "Ease in - fast out" effect.
+    t = t + ( reverse ? -0.75 : 0.2); // "Ease in - fast out" effect.
     
     // Animation Loop:
-    if(t > 20) { // If time lapse hits 20 milliseconds
+    if(t > 16) { // If time lapse hits 16 milliseconds
         reverse = true
     }
     if(t < 0.05) { // If time lapse hits 0.05 milliseconds
