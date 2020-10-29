@@ -15,9 +15,10 @@ function setup() {
 }
 
 function draw() {
-    background(0);
+    // background(0);
+    background(0, 20);
     randomSeed(99); // Setting the seed value to return the same pseudo-random numbers every time.
-    
+    // translate(-20, -20); // Fine-tuning to keep objects as centred as possible.
     /**
      * LOOPED OBJECTS:
      */
@@ -42,9 +43,45 @@ function draw() {
                 // console.log('stroke!', t) 
 
                 if (randomNum == 0) {
-                    line(0, 0, squareSize, squareSize);
+                    // line(0, 0, squareSize, squareSize);
+                    stroke(0);
+                    fill(random(j) * random(t, - 0.09), random(i) * random(t, -0.09), numOfSquares - j);
+                    rect(0, 0, squareSize, squareSize);
+                    
+                    // var r1 = 0,r2 = 0, step=1,spiralwidth=squareSize,dw=spiralwidth/250;
+                    // beginShape(TRIANGLE_STRIP);
+                    //     r1 += step;
+                    //     spiralwidth -= dw;
+                    //     r2 = r1 + spiralwidth;
+                    //     var ang = PI/30;
+                    //     var r1x = r1*sin(ang*j);
+                    //     var r1y = r1*cos(ang*j);
+                    //     var r2x = r2*sin(ang*j);
+                    //     var r2y = r2*cos(ang*j);
+                    //     vertex(r1x,r2y);
+                    //     vertex(r2x,r1y);
+                    // endShape();
                 } else {
-                    line(0, squareSize, squareSize, 0);
+                    // strokeWeight(t);
+                    // line(0, squareSize, squareSize, 0);
+                    ellipse(0, 0, squareSize, squareSize);
+                    strokeWeight(t);
+                    // ellipse(0, 0, 15, 15);
+                    ellipse(0, 0,squareSize / 2,squareSize / 2);
+
+                    // var r1 = 0,r2 = 0, step=1,spiralwidth=squareSize,dw=spiralwidth/cWidth;
+                    // beginShape(TRIANGLE_STRIP);
+                    //     r1 += step;
+                    //     spiralwidth -= dw;
+                    //     r2 = r1 + spiralwidth;
+                    //     var ang = PI/squareSize;
+                    //     var r1x = r1*sin(ang*j);
+                    //     var r1y = r1*cos(ang*j);
+                    //     var r2x = r2*sin(ang*j);
+                    //     var r2y = r2*cos(ang*j);
+                    //     vertex(r1x,r2y);
+                    //     vertex(r2x,r1y);
+                    // endShape();
                 }
             pop();
 
@@ -64,10 +101,10 @@ function draw() {
     t = t + ( reverse ? -0.5 : 0.1); // "Ease in - fast out" effect.
     
     // Animation Loop:
-    if(t > 20) {
+    if(t > 20) { // If time lapse hits 20 milliseconds
         reverse = true
     }
-    if(t < 0.05) {
+    if(t < 0.05) { // If time lapse hits 0.05 milliseconds
         reverse = false
     }
 }

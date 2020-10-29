@@ -26,6 +26,9 @@
 - Includes a bespoke animation loop that displays a "pulsating" colour effect.
 - Courtesy to Eoan O Dea for helping out with the "pulsating" colour animation loop.  
 
+### Ex. 3.5 - Controlled-Randomised Pattern - Part 2
+- A continuation of Ex. 3 but with a different pattern.
+
 ---
 ### Message from Lecturer:
 ---
