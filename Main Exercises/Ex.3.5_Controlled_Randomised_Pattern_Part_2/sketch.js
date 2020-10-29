@@ -38,7 +38,7 @@ function draw() {
             let transY = j * squareSize + squareSize / 2;
             
             let distance = dist(transX, transY, mouseX, mouseY);
-            let scaleVal = map(distance, 0, cWidth, squareSize, 15);
+            let scaleVal = map(distance, 0, cWidth, squareSize, 0);
             
             push();
                 let randomNum = round(random(0, 1)); // round(...) = Between Natural numbers of 0 and 1.
