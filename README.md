@@ -28,6 +28,8 @@
 
 ### Ex. 3.5 - Controlled-Randomised Pattern - Part 2
 - A continuation of Ex. 3 but with a different pattern.
+- Includes basic pseudo-randomised squares and circles with Andy Warhol inspired design.
+- [Image References](https://www.google.com/search?q=andy+warhol+art&sxsrf=ALeKk01yhxrVfAD4G7axM6s1tqgOKN9g3A:1603991967086&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj3qK7bp9rsAhVyt3EKHbwDAkQQ_AUoAXoECCUQAw&biw=1707&bih=803&dpr=1.13) 
 
 ---
 ### Message from Lecturer:
