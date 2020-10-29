@@ -23,6 +23,8 @@
 
 ### Ex. 3 - Controlled-Randomised Pattern
 - A pattern of controlled-randomised objects demonstrating ordered-random.
+- Includes a bespoke animation loop that displays a "pulsating" colour effect.
+- Courtesy to Eoan O Dea for helping out with the "pulsating" colour animation loop.  
 
 ---
 ### Message from Lecturer:
