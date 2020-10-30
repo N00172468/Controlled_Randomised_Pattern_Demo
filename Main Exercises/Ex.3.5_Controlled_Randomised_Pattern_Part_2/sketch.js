@@ -68,20 +68,20 @@ function draw() {
     /**
      * "PULSATING" COLOUR ANIMATION LOOP
      * 
-     * - If colour animates more than 20 milliseconds, reverse back to starting position.
+     * - If colour animates more than 1.6 seconds, reverse back to starting position.
      * - Once it reverses back, start animation again.
      * 
      * - A collaboration with Eoan O Dea. 
      */
 
-    // If reversing, set speed to -0.5 milliseconds. Else, set speed to 0.1 milliseconds.
+    // If reversing, set speed to -0.75 seconds. Else, set speed to 0.1 seconds.
     t = t + ( reverse ? -0.75 : 0.2); // "Ease in - fast out" effect.
     
     // Animation Loop:
-    if(t > 16) { // If time lapse hits 16 milliseconds
+    if(t > 16) { // If time lapse hits 1.6 seconds
         reverse = true
     }
-    if(t < 0.05) { // If time lapse hits 0.05 milliseconds
+    if(t < 0.05) { // If time lapse hits 0.05 seconds
         reverse = false
     }
 }
