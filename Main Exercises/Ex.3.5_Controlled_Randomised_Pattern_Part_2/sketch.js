@@ -23,9 +23,8 @@ function draw() {
      * USED ONLY FOR FULL-WINDOWED CANVAS. 
      * MUST COMMENT OUT translate() IF USING cWidth CANVAS!
      * 
-     * - Fine-tuning to keep objects as centred as possible.
+     * - Fine-tuning to keep objects as centred as possible when full-windowed mode.
     */
-    // translate(-20, -20); // For cWidth Canvas along with Interactive feature. 
     // translate(width / 3.5, 0); // For Common Laptop Resolutions.
     translate(width / 3.5, 80); // For Common Desktop Resolutions.
 
@@ -39,6 +38,7 @@ function draw() {
             
             let distance = dist(transX, transY, mouseX, mouseY);
             let scaleVal = map(distance, 0, cWidth, squareSize, 0);
+            // let scaleVal = map(distance, 0, width, 15, squareSize * 2);
             
             push();
                 let randomNum = round(random(0, 1)); // round(...) = Between Natural numbers of 0 and 1.
