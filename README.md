@@ -9,7 +9,7 @@
 ### Controlled-Randomised Pattern Demo
 - A pattern of controlled-randomised objects demonstrating ordered-random.
 - Includes a bespoke animation loop that displays a "pulsating" colour effect.
-- Courtesy to Eoan O Dea for helping out with the "pulsating" colour animation loop.
+- Courtesy to Eoan O'Dea for helping out with the "pulsating" colour animation loop.
 - Includes basic pseudo-randomised squares and circles with Andy Warhol inspired design as well as a "subwoofer" inspired effect.
 - Reason for Andy Warhol:
     - Vibrant chromatic patterns.
