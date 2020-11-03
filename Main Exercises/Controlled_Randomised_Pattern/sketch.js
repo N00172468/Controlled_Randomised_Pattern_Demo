@@ -25,8 +25,8 @@ function draw() {
      * 
      * - Fine-tuning to keep objects as centred as possible when full-windowed mode.
     */
-    // translate(width / 3.5, 0); // For Common Laptop Resolutions.
-    translate(width / 3.5, 80); // For Common Desktop Resolutions.
+    translate(width / 3.5, 0); // For Common Laptop Resolutions.
+    // translate(width / 3.5, 80); // For Common Desktop Resolutions.
 
     /**
      * LOOPED OBJECTS:
@@ -71,10 +71,10 @@ function draw() {
      * - If colour animates more than 1.6 seconds, reverse back to starting position.
      * - Once it reverses back, start animation again.
      * 
-     * - A collaboration with Eoan O Dea. 
+     * - A collaboration with Eoan O'Dea. 
      */
 
-    // If reversing, set speed to -0.75 seconds. Else, set speed to 0.1 seconds.
+    // If reversing, set speed to -0.75 seconds. Else, set speed to 0.2 seconds.
     t = t + ( reverse ? -0.75 : 0.2); // "Ease in - fast out" effect.
     
     // Animation Loop:
